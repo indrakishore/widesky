@@ -1,6 +1,7 @@
 <?php
     include('php-includes/check-login.php');
     include('php-includes/connect.php');
+    //Checking for current user ID 
     $userid = $_SESSION['user_id'];
 ?>
 
@@ -262,89 +263,4 @@
                                                 <td><button class="<?php echo $class;?>"><?php echo $stat;?></button></td>
                                             </tr>
                                             <?php
-                                            $i++;
-                                           }
-
-                                        ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-warning">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Links for Registration</h4>
-                        </div>
-                        <div class="panel-body bg-success">
-                            <?php
-                                echo "<strong>Left: </strong><input type = 'text' value='www.widesky.online/userRegistration.php?suser=".$userid."&side=left' class='form-control'><br>";
-                                echo "<strong>Right: </strong><input type = 'text' value='www.widesky.online/userRegistration.php?suser=".$userid."&side=right' class='form-control'><br>";
-                                echo "Use these registration links to get free registrations.";
-                            ?>
-                        </div>
-                    </div>
-                </div>
-                <?php
-                    $query = mysqli_query($con,"select * from user where email='$userid'");
-                    $result = mysqli_fetch_array($query);
-                ?>
-                <div class="col-lg-4">
-                    <div class="panel panel-success">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">User Info</h4>
-                        </div>
-                        <div class="panel-body bg-teal">
-                            <?php
-                                echo "<strong>User Code: </strong>".$result['id']."<br>";
-                                echo "<strong>Package: </strong>".$result['pack']."<br>";
-                                echo "<strong>Name: </strong>".$result['name']."<br>";
-                                echo "<strong>E-Mail: </strong>".$result['email']."<br>";
-                                echo "<strong>Sponsor ID: </strong>".$result['sponsorid']."<br>";
-                            ?>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4">
-                    <div class="panel panel-warning">
-                        <div class="panel-heading">
-                            <h4 class="panel-title">Bank Details</h4>
-                        </div>
-                        <div class="panel-body bg-orange">
-                            <?php
-                                echo "<strong>A/C No.: </strong>".$result['account']."<br>";
-                                echo "<strong>Bank: </strong>".$result['bank']."<br>";
-                                echo "<strong>IFSC: </strong>".$result['ifsc']."<br>";
-                                echo "<strong>PAN: </strong>".$result['pan']."<br>";
-                            ?>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Jquery Core Js -->
-    <script src="plugins/jquery/jquery.min.js"></script>
-
-    <!-- Bootstrap Core Js -->
-    <script src="plugins/bootstrap/js/bootstrap.js"></script>
-
-    <!-- Select Plugin Js -->
-    <script src="plugins/bootstrap-select/js/bootstrap-select.js"></script>
-
-    <!-- Slimscroll Plugin Js -->
-    <script src="plugins/jquery-slimscroll/jquery.slimscroll.js"></script>
-
-    <!-- Waves Effect Plugin Js -->
-    <script src="plugins/node-waves/waves.js"></script>
-
-    <!-- Custom Js -->
-    <script src="js/admin.js"></script>
-
-    <!-- Demo Js -->
-    <script src="js/demo.js"></script>
-</body>
-
-</html>
+                                            $i+
