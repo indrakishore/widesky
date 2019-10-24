@@ -1,6 +1,7 @@
 <?php
     include('php-includes/check-login.php');
     include('php-includes/connect.php');
+    //Checking current user who is logged in
     $userid = $_SESSION['user_id'];
 ?>
 
